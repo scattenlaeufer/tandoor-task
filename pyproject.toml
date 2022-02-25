@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "tandoor-task"
+version = "0.1.0"
+description = "A tool to parse Tandoor shopping lists to task todo entries"
+authors = ["Björn Guth <scatty@bguth.de>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aiohttp = "^3.8.1"
+rich = "^11.2.0"
+toml = "^0.10.2"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.12.2"
+black = "^22.1.0"
+pre-commit = "^2.17.0"
+pytest = "^7.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

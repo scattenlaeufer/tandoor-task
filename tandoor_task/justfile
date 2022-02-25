@@ -1,0 +1,17 @@
+cmd_file := "tandoor_task.py"
+
+default: run
+
+run:
+    poetry run ./{{ cmd_file }}
+
+test: pytest pylint black
+
+pytest:
+    poetry run pytest
+
+pylint:
+    poetry run pylint {{ cmd_file }} tests
+
+black:
+    poetry run black --check ./
